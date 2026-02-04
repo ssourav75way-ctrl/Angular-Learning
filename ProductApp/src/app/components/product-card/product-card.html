@@ -1,0 +1,27 @@
+<div class="product-card" [ngClass]="{ 'out-of-stock': !product.inStock }">
+  <h3>{{ product.name }}</h3>
+
+  <p>{{ product.description }}</p>
+
+  <p class="price">₹{{ product.price }}</p>
+
+
+  <p *ngIf="product.inStock; else notAvailable">
+    In Stock ({{ product.quantity }})
+  </p>
+
+  <ng-template #notAvailable>
+    <p class="danger">Out of Stock</p>
+  </ng-template>
+
+
+  <span
+    class="badge"
+    [ngClass]="{
+      'badge-new': product.isNew,
+      'badge-old': !product.isNew
+    }"
+  >
+    {{ product.isNew ? 'New' : 'Old' }}
+  </span>
+</div>

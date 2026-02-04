@@ -1,0 +1,32 @@
+.product-card {
+  border: 1px solid #ddd;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.out-of-stock {
+  opacity: 0.6;
+}
+
+.price {
+  font-weight: bold;
+}
+
+.danger {
+  color: red;
+}
+
+.badge {
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.badge-new {
+  background: green;
+  color: white;
+}
+
+.badge-old {
+  background: gray;
+  color: white;
+}
